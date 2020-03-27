@@ -68,7 +68,7 @@ public class Student {
         if (courses.contains(course))
             courses.remove(course);
         else
-            System.out.println("you don't have the course!");
+            courses.add(course);
     }
     public void courseToAdd(Course course){
 //        if (courses.contains(course))
@@ -78,11 +78,10 @@ public class Student {
                 courses.add(course);
     }
     public void printStudent(){
-        System.out.println("name: " + name +
-                ", IDnum: " + idNumber +
-                ", average: " + totalAvg );
+        System.out.print(name + ":");
         for (Course i: courses)
-            i.printCourse();
+            System.out.print(i.getName() + " ");
+        System.out.println();
     }
 
     }

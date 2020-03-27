@@ -31,6 +31,10 @@ public class Course {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setVahed(int vahed) {
         if (validVahed(vahed))
         this.vahed = vahed;
@@ -78,13 +82,13 @@ public class Course {
         }
         return flag;
     }
-    public void deleteCourse(Student student){
+    public void deleteStudent(Student student){
         if (students.contains(student))
             students.remove(student);
         else
-            System.out.println("don't have the course!");
+            students.add(student);
     }
-    public void addCourse(Student student){
+    public void addStudent(Student student){
         if (checkCapacity(capacity) && validCode(code) && validVahed(vahed) && checkStudent()){
             students.add(student);
         }
